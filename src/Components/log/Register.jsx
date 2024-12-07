@@ -5,7 +5,7 @@ import { AuthContext } from '../Context/MainContext';
 import { updateProfile } from 'firebase/auth';
 import { auth } from '../Firebase.config';
 const Register = () => {
-    const { handelSignup, googleSign } = useContext(AuthContext)
+    const { handelSignup } = useContext(AuthContext)
     const navg=useNavigate()
     const Toast = Swal.mixin({
         toast: true,
@@ -48,7 +48,7 @@ const Register = () => {
                             
                             Toast.fire({
                                 icon: "success",
-                                title: `WellCome ${auth.currentUser.displayName} `
+                                title: `WelCome ${auth.currentUser.displayName} `
                             });
                             navg('/')
                         }).catch((erro) => {

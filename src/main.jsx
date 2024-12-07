@@ -10,6 +10,10 @@ import Home from './Components/Home/Home';
 import Login from './Components/log/Login';
 import Register from './Components/log/Register';
 import MainContext from './Components/Context/MainContext';
+import AllReview from './Components/AllReviews/AllReview';
+import Details from './Components/Details/Details';
+import AddReview from './Components/AddReview/Addreview';
+import PrivateRoute from './Components/Context/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +31,18 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'/allreview',
+        element:<AllReview></AllReview>
+      },
+      {
+        path:'/review/:id',
+        element:<Details></Details>
+      },
+      {
+        path:'/add_review',
+        element:<PrivateRoute><AddReview></AddReview></PrivateRoute>
       }
     ]
   },

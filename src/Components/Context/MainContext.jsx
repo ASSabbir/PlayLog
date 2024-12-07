@@ -15,11 +15,14 @@ const MainContext = ({children}) => {
     const [user,setUser]=useState(null)
     const [loading,setLoading]=useState(true)
     const [datas,setDatas]=useState([])
-    useEffect(()=>{
-        fetch('/datas.json')
-        .then(res=>res.json())
-        .then(data=>setDatas(data))
-    },[])
+    console.log(datas)
+    useEffect(() => {
+        fetch('http://localhost:5000/allgames')
+            .then(res => res.json())
+            .then(data => setDatas(data))
+        setLoading(false)
+    }, [])
+    
 
 
 

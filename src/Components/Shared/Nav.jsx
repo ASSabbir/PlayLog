@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Context/MainContext";
-import { Tooltip } from 'react-tooltip'
+
 import Swal from "sweetalert2";
 
 const Nav = () => {
@@ -11,7 +11,7 @@ const Nav = () => {
         toast: true,
         position: "top-end",
         showConfirmButton: false,
-        timer: 3000,
+        timer: 1000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.onmouseenter = Swal.stopTimer;
@@ -32,10 +32,12 @@ const Nav = () => {
     }
 
     const navlink = <>
-        <li className="pr-2">Home</li>
-        <li className="pr-2">Home</li>
-        <li className="pr-2">Home</li>
-        <li className="pr-2">Home</li>
+        <Link to={'/'}><li className="pr-5">Home</li></Link>
+        <Link to={'/allreview'}><li className="pr-5">All Reviews</li></Link>
+        <Link to={'/add_review'}><li className="pr-5">Add Review</li></Link>
+        <Link to={'/'}><li className="pr-5">My  Reviews</li></Link>
+        <Link to={'/'}><li className="pr-5"> Watchlist</li></Link>
+        
     </>
     return (
         <div className="navbar px-[10vw] font-title">

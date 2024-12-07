@@ -35,7 +35,7 @@ const Login = () => {
 
         Toast.fire({
           icon: "success",
-          title: `WellCome ${user.user.displayName} `
+          title: `WelCome ${user.user.displayName} `
         });
         navg(location.state ? location.state : '/')
 
@@ -51,18 +51,21 @@ const Login = () => {
   }
   const handelgoogle = () => {
     googleSign()
-        .then(() => {
+      .then((user) => {
+        Toast.fire({
+          icon: "success",
+          title: `WelCome ${user.user.displayName} `
+        });
+        navg(location.state ? location.state : '/')
 
-            navg(location.state ? location.state : '/')
-
-        })
-        .catch(error => {
-            Toast.fire({
-                icon: "error",
-                title: error.code
-            });
-        })
-}
+      })
+      .catch(error => {
+        Toast.fire({
+          icon: "error",
+          title: error.code
+        });
+      })
+  }
   return (
     <div
       className="h-[calc(100vh-64px)] flex items-center justify-center bg-cover bg-center"

@@ -1,0 +1,112 @@
+ [
+      {
+        "gameCover": " https://i.ibb.co.com/0D1HS6g/elder-ring.jpg",
+        "gameTitle": "Elden Ring",
+        "reviewDescription": "A masterful open-world experience with challenging combat and breathtaking visuals.",
+        "rating": 9.8,
+        "publishingYear": 2022,
+        "genres": "RPG",
+        "userEmail": "johndoe@example.com",
+        "userName": "John Doe",
+        "topGame": true
+      },
+      {
+        "gameCover": " https://i.ibb.co.com/L1YWNgZ/sekiro.jpg",
+        "gameTitle": "Sekiro: Shadows Die Twice",
+        "reviewDescription": "Intense combat with a unique posture system, offering rewarding difficulty.",
+        "rating": 9.5,
+        "publishingYear": 2019,
+        "genres": "Action",
+        "userEmail": "janesmith@example.com",
+        "userName": "Jane Smith",
+        "topGame": true
+      },
+      {
+        "gameCover": " https://i.ibb.co.com/481js36/last-2.jpg",
+        "gameTitle": "The Last of Us Part II",
+        "reviewDescription": "A gripping narrative with emotional depth and stunning graphics.",
+        "rating": 9.7,
+        "publishingYear": 2020,
+        "genres": "Adventure",
+        "userEmail": "michaelj@example.com",
+        "userName": "Michael Johnson",
+        "topGame": true
+      },
+      {
+        "gameCover": "https://i.ibb.co.com/6rQpFFd/minecraft.jpg",
+        "gameTitle": "Minecraft",
+        "reviewDescription": "An endless sandbox that fuels creativity and exploration.",
+        "rating": 9.2,
+        "publishingYear": 2011,
+        "genres": "Adventure",
+        "userEmail": "emilydavis@example.com",
+        "userName": "Emily Davis",
+        "topGame": true
+      },
+      {
+        "gameCover": "https://i.ibb.co.com/qRMc6Kx/god-of-war.jpg",
+        "gameTitle": "God of War: Ragnarok",
+        "reviewDescription": "A powerful sequel with a deep emotional story and intense action.",
+        "rating": 9.9,
+        "publishingYear": 2022,
+        "genres": "Action",
+        "userEmail": "chrisbrown@example.com",
+        "userName": "Chris Brown",
+        "topGame": true
+      },
+      {
+        "gameCover": "https://i.ibb.co.com/sj8mfXM/red.jpg",
+        "gameTitle": "Red Dead Redemption 2",
+        "reviewDescription": "A breathtaking open-world Western with unparalleled detail and story.",
+        "rating": 9.6,
+        "publishingYear": 2018,
+        "genres": "Adventure",
+        "userEmail": "alexwhite@example.com",
+        "userName": "Alex White",
+        "topGame": true
+      },
+      {
+        "gameCover": " https://i.ibb.co.com/6wnpPQp/cyberpunk.jpg",
+        "gameTitle": "Cyberpunk 2077",
+        "reviewDescription": "An ambitious RPG with a captivating world despite its initial issues.",
+        "rating": 8.5,
+        "publishingYear": 2020,
+        "genres": "RPG",
+        "userEmail": "sarahlee@example.com",
+        "userName": "Sarah Lee",
+        "topGame": false
+      },
+      {
+        "gameCover": "https://i.ibb.co.com/3BV11pY/orthngt.jpg",
+        "gameTitle": "Fortnite",
+        "reviewDescription": "A global phenomenon offering fun, fast-paced battle royale gameplay.",
+        "rating": 8.8,
+        "publishingYear": 2017,
+        "genres": "Action",
+        "userEmail": "benmiller@example.com",
+        "userName": "Ben Miller",
+        "topGame": false
+      },
+      {
+        "gameCover": "https://i.ibb.co.com/g4CFs6r/apex.jpg",
+        "gameTitle": "Apex Legends",
+        "reviewDescription": "A top-tier battle royale with unique characters and tactical gameplay.",
+        "rating": 9.0,
+        "publishingYear": 2019,
+        "genres": "Action",
+        "userEmail": "oliviataylor@example.com",
+        "userName": "Olivia Taylor",
+        "topGame": false
+      },
+      {
+        "gameCover": "https://i.ibb.co.com/4tHv6HQ/witcher.jpg",
+        "gameTitle": "The Witcher 3: Wild Hunt",
+        "reviewDescription": "A rich, sprawling RPG with deep storytelling and memorable quests.",
+        "rating": 10.0,
+        "publishingYear": 2015,
+        "genres": "RPG",
+        "userEmail": "danielwilson@example.com",
+        "userName": "Daniel Wilson",
+        "topGame": false
+      }
+    ]
