@@ -10,9 +10,6 @@ const MyReview = () => {
     const temp = datas.filter(data => data.userEmail == user.email)
     const [myData, setMyData] = useState(temp)
 
-
-
-
     // handel delete 
     const handelDelete = (data) => {
         const swalWithBootstrapButtons = Swal.mixin({
