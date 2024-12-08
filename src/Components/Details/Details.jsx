@@ -62,7 +62,6 @@ const Details = () => {
                         />
                     </div>
 
-
                     <div className="w-full md:w-2/3 space-y-4">
                         <h1 className="text-3xl font-title font-bold">{data.gameTitle}</h1>
                         <p className="text-gray-400 text-sm">
