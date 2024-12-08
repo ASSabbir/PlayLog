@@ -34,7 +34,7 @@ const Update = () => {
         console.log(updateData)
 
 
-        // fetch(`http://localhost:5000/update/${}`, {
+        // fetch(`https://server-alpha-blue.vercel.app/update/${}`, {
         //     method: "POST",
         //     headers: {
         //         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const Update = () => {
         //         Swal.fire("Error", "Failed to add review.", "error");
         //         console.log(error)
         //     });
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://server-alpha-blue.vercel.app/update/${id}`, {
             method: "PUT", // Use PUT or PATCH
             headers: {
                 "Content-Type": "application/json",

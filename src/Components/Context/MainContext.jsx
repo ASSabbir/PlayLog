@@ -13,7 +13,7 @@ const MainContext = ({children}) => {
     const [datas,setDatas]=useState([])
     const [watchData,setWatchData]=useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/allgames')
+        fetch('https://server-alpha-blue.vercel.app/allgames')
             .then(res => res.json())
             .then(data => 
                 {setDatas(data)
@@ -22,7 +22,7 @@ const MainContext = ({children}) => {
         
     }, [])
     useEffect(()=>{
-        fetch('http://localhost:5000/watchlist')
+        fetch('https://server-alpha-blue.vercel.app/watchlist')
         .then(res=>res.json())
         .then(data=>{
             setWatchData(data)

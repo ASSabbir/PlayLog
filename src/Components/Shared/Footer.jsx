@@ -1,7 +1,7 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 const Footer = () => {
     return (
-        <footer className="bg-zinc-900 text-gray-200 py-10">
+        <footer className="bg-zinc-900 border-t text-gray-200 py-10">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-5">
                 
                 <div className="mb-6 md:mb-0 text-center md:text-left">

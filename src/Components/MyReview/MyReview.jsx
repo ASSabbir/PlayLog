@@ -37,7 +37,7 @@ const MyReview = () => {
             })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/deleteReview/${data._id}`, {
+                    fetch(`https://server-alpha-blue.vercel.app/deleteReview/${data._id}`, {
                         method: 'DELETE',
 
                     })

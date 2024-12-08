@@ -74,7 +74,7 @@ const Nav = () => {
                 {
                     user ?
                         <div className="flex items-center gap-2">
-                            <div className="avatar tooltip tooltip-left" data-tip={user.email}>
+                            <div className="avatar tooltip tooltip-left" data-tip={user.displayName}>
                                 <div className="w-12 rounded-full">
                                     <img src={user.photoURL} />
                                 </div>

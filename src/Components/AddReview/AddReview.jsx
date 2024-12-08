@@ -35,7 +35,7 @@ const AddReview = () => {
         };
 
 
-        fetch("http://localhost:5000/addreviews", {
+        fetch("https://server-alpha-blue.vercel.app/addreviews", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

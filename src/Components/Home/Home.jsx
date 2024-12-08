@@ -3,11 +3,12 @@ import Banner from './Swiper/Banner';
 import TopGames from './TopGames';
 import Turnament from './Turnament';
 import Blog from './Blog';
+import Type from './Type';
 
 const Home = () => {
     const [datas,setdatas]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allgames')
+        fetch('https://server-alpha-blue.vercel.app/allgames')
         .then(res=>res.json())
         .then(data=>setdatas(data))
 
@@ -20,6 +21,7 @@ const Home = () => {
             <TopGames datas={topdatas}></TopGames>
             <Turnament></Turnament>
             <Blog></Blog>
+            <Type></Type>
         </div>
     );
 };
