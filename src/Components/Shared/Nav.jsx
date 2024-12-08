@@ -36,14 +36,14 @@ const Nav = () => {
         <Link to={'/allreview'}><li className="pr-5">All Reviews</li></Link>
         <Link to={'/add_review'}><li className="pr-5">Add Review</li></Link>
         <Link to={'/my_review'}><li className="pr-5">My Reviews</li></Link>
-        <Link to={'/'}><li className="pr-5"> Watchlist</li></Link>
+        <Link to={'/watchlist'}><li className="pr-5"> Watchlist</li></Link>
         
     </>
     return (
         <div className="navbar px-[10vw] font-title">
             <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                <div className="dropdown ">
+                    <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -59,7 +59,7 @@ const Nav = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-zinc-900 p-6  z-[1] mt-3 w-52 space-y-3 shadow">
                         {navlink}
                     </ul>
                 </div>

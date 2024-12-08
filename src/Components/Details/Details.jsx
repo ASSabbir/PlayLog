@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Details = () => {
-    const { user, datas } = useContext(AuthContext)
+    const { user, datas,setWatchData,watchData } = useContext(AuthContext)
     const { pathname } = useLocation()
     const id = pathname.replace('/review/', '')
     const data = datas.find(data => data._id === id)
@@ -29,16 +29,25 @@ const Details = () => {
             });
             return;
         }
-
-
+        
+        const updateddata={...data,'addedUser':user.email}
+        delete updateddata._id
+        console.log(updateddata)
+        setWatchData([...watchData,updateddata])
 
         fetch("http://localhost:5000/watchlist", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
+            body: JSON.stringify(updateddata),
         })
             .then((res) => res.json())
-            .then((data) => console.log(data));
+            .then((data) => {
+                Toast.fire({
+                    icon: "success",
+                    title: "Added to your watchlist."
+                });
+                console.log(data)})
+            .catch(error=>console.log(error))
     };
     return (
         <div>
@@ -55,7 +64,7 @@ const Details = () => {
 
 
                     <div className="w-full md:w-2/3 space-y-4">
-                        <h1 className="text-3xl font-bold">{data.gameTitle}</h1>
+                        <h1 className="text-3xl font-title font-bold">{data.gameTitle}</h1>
                         <p className="text-gray-400 text-sm">
                             Reviewed by: {data.userName} ({data.userEmail})
                         </p>

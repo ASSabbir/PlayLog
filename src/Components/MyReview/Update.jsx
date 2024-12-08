@@ -1,19 +1,17 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../Context/MainContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const AddReview = () => {
-    const { user,setDatas,datas } = useContext(AuthContext);
+
+const Update = () => {
+    const { user,datas } = useContext(AuthContext);
+    const { pathname } = useLocation()
+    const id = pathname.replace('/update/', '')
+    const data = datas.find(data => data._id === id)
+    
     const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        gameCover: "",
-        gameTitle: "",
-        reviewDescription: "",
-        rating: "",
-        publishingYear: "",
-        genres: "Action",
-    });
+    const [formData, setFormData] = useState(data);
 
 
 
@@ -28,38 +26,59 @@ const AddReview = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const reviewData = {
+        const updateData = {
             ...formData,
             userEmail: user.email,
             userName: user.displayName,
         };
+        console.log(updateData)
 
 
-        fetch("http://localhost:5000/addreviews", {
-            method: "POST",
+        // fetch(`http://localhost:5000/update/${}`, {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify(updateData),
+        // })
+        //     .then((res) => res.json())
+        //     .then((data) => {
+        //         if (data.insertedId) {
+                    
+        //             Swal.fire("Success!", "Review added successfully!", "success");
+        //             navigate("/");
+        //         }
+        //     })
+        //     .catch((error) => {
+        //         Swal.fire("Error", "Failed to add review.", "error");
+        //         console.log(error)
+        //     });
+        fetch(`http://localhost:5000/update/${id}`, {
+            method: "PUT", // Use PUT or PATCH
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(reviewData),
+            body: JSON.stringify(updateData),
         })
             .then((res) => res.json())
-            .then((data) => {
-                if (data.insertedId) {
-                    setDatas([...datas,reviewData])
-                    Swal.fire("Success!", "Review added successfully!", "success");
+            .then((result) => {
+                if (result.modifiedCount > 0) {
+                    Swal.fire("Success!", "Review updated successfully!", "success");
                     navigate("/");
+                } else {
+                    Swal.fire("Error", "Failed to update review.", "error");
                 }
             })
             .catch((error) => {
-                Swal.fire("Error", "Failed to add review.", "error");
-                console.log(error)
+                Swal.fire("Error", "Something went wrong.", "error");
+                console.error("Error updating review:", error);
             });
     };
 
     return (
-        <div style={{ backgroundImage: "url('/b3.jpg')" }} className="flex flex-col items-center  p-8">
+        <div style={{ backgroundImage: "url('/b2.jpg')" }} className="flex flex-col items-center  p-8">
 
-            <h1 className="text-3xl font-bold font-title text-center mb-6">Add New Review</h1>
+            <h1 className="text-3xl font-bold font-title text-center mb-6">Update {formData.gameTitle}</h1>
             <div className="w-full max-w-2xl  bg-white bg-opacity-10 backdrop-blur-md rounded-lg p-8 shadow-lg">
                 <form
                     onSubmit={handleSubmit}
@@ -184,7 +203,7 @@ const AddReview = () => {
                             type="submit"
                             className="mt-4 border-2 border-primary hover:bg-transparent  px-5 py-3 bg-primary duration-200 w-full"
                         >
-                            Submit Review
+                            Update Review
                         </button>
                     </div>
                 </form>
@@ -194,4 +213,4 @@ const AddReview = () => {
     );
 };
 
-export default AddReview;
+export default Update;

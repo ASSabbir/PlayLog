@@ -1,13 +1,14 @@
-import React, { useContext, useState } from 'react';
+import  { useContext, useState } from 'react';
 import { AuthContext } from '../Context/MainContext';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MyReview = () => {
-    
-    const { user, datas } = useContext(AuthContext)
+
+    const { user, datas,setDatas } = useContext(AuthContext)
     console.log(user, datas)
     const temp = datas.filter(data => data.userEmail == user.email)
-    const [myData,setMyData]=useState(temp)
+    const [myData, setMyData] = useState(temp)
 
 
 
@@ -39,18 +40,19 @@ const MyReview = () => {
                 if (result.isConfirmed) {
                     fetch(`http://localhost:5000/deleteReview/${data._id}`, {
                         method: 'DELETE',
-                        
-                    })
-                    .then(response => response.json())
-                    .then(result => {
-                        console.log(result)
 
                     })
-                    .catch(error => {
-                        console.error(error);
-                    
-                    });
-                    setMyData(myData.filter(da=>da._id!==data._id))
+                        .then(response => response.json())
+                        .then(result => {
+                            console.log(result)
+
+                        })
+                        .catch(error => {
+                            console.error(error);
+
+                        });
+                    setMyData(myData.filter(da => da._id !== data._id))
+                    setDatas(datas.filter(da => da._id !== data._id))
                     swalWithBootstrapButtons.fire({
                         title: "Deleted!",
                         text: "Your file has been deleted.",
@@ -110,7 +112,9 @@ const MyReview = () => {
                             )}
                             <div className='gap-5 flex'>
                                 <button onClick={() => handelDelete(data)} className="mt-4 border-2 border-primary hover:bg-transparent w-40 px-5 py-3 bg-primary duration-200">Delete</button>
-                                <button className="mt-4 border-2 border-primary px-5 py-3 w-40 hover:bg-primary duration-200">Update</button>
+                                <Link to={`/update/${data._id}`}>
+                                    <button className="mt-4 border-2 border-primary px-5 py-3 w-40 hover:bg-primary duration-200">Update</button>
+                                </Link>
                             </div>
                         </div>
                     </div>)

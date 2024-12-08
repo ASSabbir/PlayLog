@@ -15,11 +15,15 @@ import Details from './Components/Details/Details';
 import AddReview from './Components/AddReview/Addreview';
 import PrivateRoute from './Components/Context/PrivateRoute';
 import MyReview from './Components/MyReview/MyReview';
+import Update from './Components/MyReview/Update';
+import Watchlist from './Components/WatchList/Watchlist';
+import ErrorPage from './Components/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
@@ -50,8 +54,12 @@ const router = createBrowserRouter([
         element:<PrivateRoute><MyReview></MyReview></PrivateRoute>
       },
       {
-        path:'/p',
-        element:<PrivateRoute></PrivateRoute>
+        path:'/update/:id',
+        element:<PrivateRoute><Update></Update></PrivateRoute>
+      },
+      {
+        path:'/watchlist',
+        element:<PrivateRoute><Watchlist></Watchlist></PrivateRoute>
       }
     ]
   },

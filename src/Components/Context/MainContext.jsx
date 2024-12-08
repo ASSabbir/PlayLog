@@ -15,16 +15,24 @@ const MainContext = ({children}) => {
     const [user,setUser]=useState(null)
     const [loading,setLoading]=useState(true)
     const [datas,setDatas]=useState([])
-    
+    const [watchData,setWatchData]=useState([])
     useEffect(() => {
         fetch('http://localhost:5000/allgames')
             .then(res => res.json())
             .then(data => 
                 {setDatas(data)
-                setLoading(false)
+                
             })
         
     }, [])
+    useEffect(()=>{
+        fetch('http://localhost:5000/watchlist')
+        .then(res=>res.json())
+        .then(data=>{
+            setWatchData(data)
+           
+        })
+    },[])
     
 
 
@@ -71,7 +79,9 @@ const MainContext = ({children}) => {
         setDatas,
         logout,
         googleSign,
-        handelUpdateUser
+        handelUpdateUser,
+        watchData,
+        setWatchData
     }
 
     return (

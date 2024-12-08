@@ -1,8 +1,39 @@
-# React + Vite
+# **PlayLog**  
+**[Live Website URL](https://playlog.live)**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## **About**  
+**PlayLog** is the ultimate platform for gamers to share, explore, and review games. Whether you’re looking for trending reviews or a personalized watchlist, PlayLog offers everything in a stylish black-and-red theme.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## **Key Features**  
+
+1. **Interactive Sorting & Filtering**  
+   - Sort reviews by rating or year to discover the most relevant games.  
+   - Filter reviews based on game genres for a curated experience.  
+
+2. **User Account Integration**  
+   - Logged-in users can add, update, or delete reviews and maintain a custom watchlist.  
+
+3. **Dynamic Dark/Light Theme**  
+   - Toggle between dark and light modes for a tailored browsing experience.  
+
+4. **Responsive & Accessible Design**  
+   - Optimized for all devices, providing a seamless experience on desktop and mobile.  
+
+5. **Enhanced User Engagement**  
+   - Visual cards and a dynamic footer with social media integration make the experience engaging.  
+
+---
+
+## **Technologies Used**  
+
+- **Frontend**: React.js, Tailwind CSS  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB  
+- **Authentication**: Firebase  
+
+---
+
