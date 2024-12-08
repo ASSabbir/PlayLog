@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddReview = () => {
-    const { user } = useContext(AuthContext);
+    const { user,setDatas,datas } = useContext(AuthContext);
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         gameCover: "",
@@ -45,6 +45,7 @@ const AddReview = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.insertedId) {
+                    // setDatas(...datas,reviewData)
                     Swal.fire("Success!", "Review added successfully!", "success");
                     navigate("/");
                 }

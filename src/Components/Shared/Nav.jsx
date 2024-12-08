@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const Nav = () => {
     const { user,logout } = useContext(AuthContext)
-    console.log(user)
+    
     const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -35,7 +35,7 @@ const Nav = () => {
         <Link to={'/'}><li className="pr-5">Home</li></Link>
         <Link to={'/allreview'}><li className="pr-5">All Reviews</li></Link>
         <Link to={'/add_review'}><li className="pr-5">Add Review</li></Link>
-        <Link to={'/'}><li className="pr-5">My  Reviews</li></Link>
+        <Link to={'/my_review'}><li className="pr-5">My Reviews</li></Link>
         <Link to={'/'}><li className="pr-5"> Watchlist</li></Link>
         
     </>

@@ -2,7 +2,7 @@
 
 const TopgamesCard = ({ data }) => {
     const { gameCover, gameTitle, reviewDescription, rating } = data
-    console.log(data)
+    
     return (
         <div>
             <div className="relative  cursor-pointer h-80 bg-gray-800 text-white  overflow-hidden group">

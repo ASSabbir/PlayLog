@@ -7,7 +7,7 @@ import { data } from "react-router-dom";
 const AllReview = () => {
     const { datas, loading } = useContext(AuthContext)
 
-    console.log(loading)
+    
     if (!datas.length) {
         return <div className="h-screen flex justify-center items-center">
         <div className="flex flex-col m-8 rounded shadow-md w-60 sm:w-80 animate-pulse h-96">

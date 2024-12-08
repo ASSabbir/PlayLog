@@ -14,6 +14,7 @@ import AllReview from './Components/AllReviews/AllReview';
 import Details from './Components/Details/Details';
 import AddReview from './Components/AddReview/Addreview';
 import PrivateRoute from './Components/Context/PrivateRoute';
+import MyReview from './Components/MyReview/MyReview';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
       {
         path:'/add_review',
         element:<PrivateRoute><AddReview></AddReview></PrivateRoute>
+      },
+      {
+        path:'/my_review',
+        element:<PrivateRoute><MyReview></MyReview></PrivateRoute>
+      },
+      {
+        path:'/p',
+        element:<PrivateRoute></PrivateRoute>
       }
     ]
   },

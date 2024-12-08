@@ -15,12 +15,15 @@ const MainContext = ({children}) => {
     const [user,setUser]=useState(null)
     const [loading,setLoading]=useState(true)
     const [datas,setDatas]=useState([])
-    console.log(datas)
+    
     useEffect(() => {
         fetch('http://localhost:5000/allgames')
             .then(res => res.json())
-            .then(data => setDatas(data))
-        setLoading(false)
+            .then(data => 
+                {setDatas(data)
+                setLoading(false)
+            })
+        
     }, [])
     
 
@@ -35,8 +38,9 @@ const MainContext = ({children}) => {
     }
     useEffect(()=>{
         const unsub=onAuthStateChanged(auth,currentUser=>{
-            setLoading(false)
+            
             setUser(currentUser)
+            setLoading(false)
             
 
         })
@@ -64,6 +68,7 @@ const MainContext = ({children}) => {
         handelSignup,
         handelSignin,
         user,
+        setDatas,
         logout,
         googleSign,
         handelUpdateUser
