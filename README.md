@@ -50,7 +50,7 @@
 
 ### 1️⃣ Clone the repository  
 ```sh
-git clone https://github.com/your-username/playlog.git
+git clone https://github.com/ASSabbir/playlog.git
 cd playlog
 ```
 
