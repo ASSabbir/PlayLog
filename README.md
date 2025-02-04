@@ -1,8 +1,8 @@
 # **🎮 PlayLog**
 🚀 **[Live Website](https://playlog-81400.web.app)**  
 
-![PlayLog Preview](https://your-image-url.com)  
-*(Replace this with an actual image URL)*  
+![PlayLog Preview][(https://your-image-url.com](https://raw.githubusercontent.com/ASSabbir/PlayLog/refs/heads/main/Capture.PNG))  
+ 
 
 ---
 
@@ -52,6 +52,23 @@ cd playlog
 ```
 
 ### 2️⃣ Install dependencies
-```npm install```
+```sh
+npm install
+```
+
+### 3️⃣ Set up your .env file
+```sh
+VITE_apiKey=your-api-key
+VITE_authDomain=your-auth-domain
+VITE_projectId=your-project-id
+VITE_storageBucket=your-storage-bucket
+VITE_messagingSenderId=your-messaging-sender-id
+VITE_appId=your-app-id
+```
+
+### 4️⃣ Run the development server
+```sh
+npm run dev
+``
 
 
