@@ -1,7 +1,10 @@
 # **🎮 PlayLog**
 🚀 **[Live Website](https://playlog-81400.web.app)**  
 
-![PlayLog Preview][(https://your-image-url.com](https://raw.githubusercontent.com/ASSabbir/PlayLog/refs/heads/main/Capture.PNG))  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ASSabbir/PlayLog/refs/heads/main/Capture.PNG" alt="Banner Image" />
+</p>
+
  
 
 ---
